@@ -23,7 +23,6 @@ fi
 rm -f /etc/shadowsocks.json
 rm -f /etc/init.d/shadowsocks
 rm -rf /usr/local/shadowsocks
-clear
 echo "ShadowsocksR 环境清理成功!"
 
 echo
