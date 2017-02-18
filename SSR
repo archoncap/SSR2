@@ -10,8 +10,22 @@ export PATH
 #   Intro:  https://shadowsocks.be/9.html                         #
 #=================================================================#
 rm -f SSR
-uninstall_shadowsocks()
+/etc/init.d/shadowsocks status > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+/etc/init.d/shadowsocks stop
+fi
+checkos
+if [ "$OS" == 'CentOS' ]; then
+chkconfig --del shadowsocks
+else
+update-rc.d -f shadowsocks remove
+fi
+rm -f /etc/shadowsocks.json
+rm -f /etc/init.d/shadowsocks
+rm -rf /usr/local/shadowsocks
 clear
+echo "ShadowsocksR 环境清理成功!"
+
 echo
 
 echo
