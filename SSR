@@ -10,7 +10,7 @@ export PATH
 #   Intro:  https://shadowsocks.be/9.html                         #
 #=================================================================#
 rm -f SSR
-uninstall_shadowsocks
+uninstall_shadowsocks()
 clear
 echo
 
