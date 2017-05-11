@@ -304,6 +304,7 @@ function config_shadowsocks(){
 }
 EOF
 }
+
 # Install ShadowsocksR
 function install_ss(){
     # Install libsodium
