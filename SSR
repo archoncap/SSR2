@@ -1,0 +1,42 @@
+#!/bin/bash
+cd /root
+clear
+sleep 1
+echo -e "============================================================="
+echo
+echo -e "\t 感谢使用 “\033[35m Dios \033[0m” 一键SSR脚本"
+echo
+echo -e "\t 已采用\033[36m 【七牛云加速】支持【国内外一键搭建】\033[0m "
+echo
+echo -e "\t 妖火网：yaohuo.me"
+echo
+echo -e "\t \033[32m 版本v1.2 \033[0m SSR一键搭建 By “\033[35m Dios \033[0m”"
+echo
+echo -e "============================================================="
+echo -e "已通过 \033[36m “阿里云”/“腾讯云”/“京东云”/“樱花云”/“亚马逊” \033[0m 安装测试"
+echo
+echo -e "\033[32m 1.单端口SSR一键搭建 \033[0m"
+echo
+echo -e "\033[33m 2.多端口SSR一键搭建 \033[0m"
+echo
+echo -e "\033[34m 3.高级调试安装模式\033[0m \033[31m [不推荐] \033[0m"
+echo
+echo -e "\033[31m x.卸载SSR \033[0m"
+echo
+echo
+echo -e  "\033[34m 请选择 [ 1 , 2 , 3 或 x ] 进行下一步安装！\033[0m
+
+ >请选择安装类型: "
+read az
+  case $az in
+    1) wget -N https://raw.githubusercontent.com/EngiGu/SS-R/master/SSR-one && bash SSR-one
+       ;;
+    2) wget -N https://raw.githubusercontent.com/EngiGu/SS-R/master/DSSR && bash DSSR
+       ;;
+    3) wget -N https://raw.githubusercontent.com/EngiGu/SS-R/master/GJ && bash GJ
+       ;;
+    x) wget -N https://raw.githubusercontent.com/EngiGu/SS-R/master/SSR-one && bash SSR-one uninstall
+       ;;
+    *)  echo -e "\033[31m 错误：只能选择[ 1 , 2 , 3 或 x ]！！\033[0m"
+       ;;
+  esac
